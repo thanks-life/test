@@ -1,0 +1,15 @@
+
+
+
+
+adb wait-for-device;adb shell logcat |grep -E "TEST_" |tee test_test.log
+
+
+adb shell logcat | grep --color=auto -Ev "QVRServiceLowFreqSensor|BootService|svr|IM-KIWIPLAYER|FAN" | tee test_01.log
+
+
+adb shell am startservice -a android.intent.action.UiVALUE --ei value 4
+
+
+
+
